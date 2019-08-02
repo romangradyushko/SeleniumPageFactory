@@ -17,7 +17,7 @@ public class HomePage extends AbstractPage{
 	WebElement PASSWORD_INPUT_LOCATOR;
 	@FindBy(how=How.XPATH, xpath = "//label[@id='mailbox:submit']")
 	WebElement ENTER_BUTTON_LOCATOR;
-	@FindBy(how=How.XPATH, xpath = "//*[@id=\"app-canvas\"]/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/div[1]/div/span/span")
+	@FindBy(how=How.XPATH, xpath = "//span[@class='compose-button__wrapper']")
 	WebElement EMAIL_BUTTON_CREATE_LOCATOR;
 	
 	public HomePage(WebDriver driver) {
@@ -41,9 +41,5 @@ public class HomePage extends AbstractPage{
 		PASSWORD_INPUT_LOCATOR.sendKeys(password);
 		ENTER_BUTTON_LOCATOR.click();
 		waitForElementEnabled(EMAIL_BUTTON_CREATE_LOCATOR);
-		//EMAIL_BUTTON_CREATE_LOCATOR.click();
-        //driver.findElement(LOGIN_INPUT_LOCATOR).sendKeys(login);
-        //driver.findElement(PASSWORD_INPUT_LOCATOR).sendKeys(password);
-        //driver.findElement(ENTER_BUTTON_LOCATOR).click();
 	}	
 }

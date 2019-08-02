@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MailPage extends AbstractPage{
 	public static final int WAIT_FOR_ELEMENT_TIMEOUT_SECONDS = 10;		
-	@FindBy(how=How.XPATH, xpath = "//*[@id=\"app-canvas\"]/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/div[1]/div/span/span")
+	@FindBy(how=How.XPATH, xpath = "//span[@class='compose-button__wrapper']")
 	WebElement EMAIL_BUTTON_CREATE_LOCATOR;
 	@FindBy(how=How.XPATH, xpath = "//label[@class='container--zU301']")
 	WebElement EMAIL_INPUT_TO_LOCATOR;
@@ -22,8 +22,7 @@ public class MailPage extends AbstractPage{
 	WebElement EMAIL_BUTTON_SAVE_LOCATOR;
 	@FindBy(how=How.XPATH, xpath = "//button[@class='container--30-bI type_base--2Nryp color_base--36fu2' and @tabindex='700']")
 	WebElement EMAIL_BUTTON_EXIT_LOCATOR;
-	@FindBy(how=How.XPATH, xpath = "//*[@id=\"app-canvas\"]/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/nav/a[5]/div")
-	WebElement EMAIL_BUTTON_DRAFT_FOLDER_LOCATOR;
+	
 	
 	public MailPage(WebDriver driver) {
         super(driver);
